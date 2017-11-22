@@ -33,4 +33,4 @@ scores = {"a": 1, "c": 3, "b": 3, "e": 1, "d": 2, "g": 2,
          "r": 1, "u": 1, "t": 1, "w": 4, "v": 4, "y": 4,
          "x": 8, "z": 10}
 
-具体要求参见：http://wiki.openhatch.org/Scrabble_challenge"""
+For more information, see: http://wiki.openhatch.org/Scrabble_challenge"""
