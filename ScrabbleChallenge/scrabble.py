@@ -1,4 +1,5 @@
 from sys import argv
+from ScrabbleChallenge.ScoreWord import ScoreWord
 
 sowpodlist = []
 valid_words = []
@@ -54,7 +55,19 @@ def find_valid_words(key_word):
 
 def scoring():
     """determine the Scrabble scores for each valid word, using the scores dictionary"""
-    print(valid_words)
+    # calculate score for every word
+    score_words = []
+    for word in valid_words:
+        word_score = 0
+        for letter in list(word):
+            word_score += scores[letter]
+        score_words.append(ScoreWord(word_score, word))
+
+    # sort the words by score
+    score_words.sort(key=lambda item: item.score, reverse=True)
+    # print the words by score
+    for score_word in score_words:
+        print(score_word)
 
 
 # Run this script
